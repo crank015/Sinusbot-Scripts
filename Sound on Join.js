@@ -28,14 +28,14 @@ registerPlugin({
     author: 'Crank015 <cranker015@gmail.com> & Lala Deviluke <latias@mail.latias.info>',
     vars: {
 	Sound: {
-            	title: 'Welcher Sound?',
-            	type: 'string'
-	},
-        message: {
+            title: 'Welcher Sound?',
+            type: 'string'
+		},
+		message: {
             title: 'Welche Naricht?',
             type: 'string'
         },
-	language: {
+		language: {
             title: 'Language',
             type: 'select',
             options: ['Deutsch',
