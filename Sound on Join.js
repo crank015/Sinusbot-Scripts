@@ -51,7 +51,7 @@ registerPlugin({
     }
 }, function(sinusbot, config, info) {
 
-
+//Load Messages
     log('');
     log('Loading...');
     log('');
@@ -66,7 +66,8 @@ registerPlugin({
         author = author.join(' & ');
     }
     log(info.name + ' v' + info.version + ' by ' + author + ' for SinusBot v0.9.9-8f70ff3 (and above)');
-
+	
+//Script
 		var sound = config.Sound;
         	var chat = config.message;
 		var lang;
@@ -92,6 +93,7 @@ registerPlugin({
 			return;
 	}
     });
+//Info
     log('');
     log('Loaded !');
     log('');
