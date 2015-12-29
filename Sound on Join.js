@@ -85,7 +85,7 @@ registerPlugin({
 			if (ev.oldChannel == 0) {
             			if (config.Typ == 0) {
                 			chatPrivate(ev.clientId, chat);
-            			} else if(config.Typ == 1) {
+            			} else if (config.Typ == 1) {
 							if (sound.indexOf('track://')) {
 								play(sound);
 							} else {
