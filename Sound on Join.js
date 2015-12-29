@@ -22,8 +22,8 @@
  */
 
 registerPlugin({
-    name: 'sound',
-    version: '1.0.5',
+    name: 'Sound on Join',
+    version: '1.0.6',
     description: 'Spielt Musik, oder schickt eine Naricht, wenn jemand in die Eingangshalle kommt',
     author: 'Crank015 <cranker015@gmail.com> & Lala Deviluke <latias@mail.latias.info>',
     vars: {
@@ -86,9 +86,13 @@ registerPlugin({
             			if (config.Typ == 0) {
                 			chatPrivate(ev.clientId, chat);
             			} else if(config.Typ == 1) {
-                			play('track://' + sound);
-            			} else {
-					say(chat, lang);
+							if (sound.indexOf('track://')) {
+								play(sound);
+							} else {
+								play('track://' + sound);
+							}
+						} else {
+							say(chat, lang);
 				}
 			return;
 	}
