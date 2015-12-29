@@ -23,30 +23,58 @@
 
 registerPlugin({
     name: 'AdminChat',
-    version: '1.0',
+    version: '1.1',
     description: 'Schreibt dem Admin wenn, ein User einen "! command " nutzt',
     author: 'Crank015 <cranker015@gmail.com> & Lala Deviluke <latias@mail.latias.info>',
     vars: {
-			AdminID:
-				title:'Admin UID',
-				Typ: 'string'
-	}
-	
+			AdminID: {
+				title: 'Admin UID',
+				type: 'string'
+			},
+			{
+			AdminGroup:
+				title: 'Admin Group',
+				type: 'string'
+			}
+		}
 	}, function(sinusbot, config) {
 		
 		if (config.AdminID) {
-			
 			var adminid = config.AdminID.split(',');
-			
 		} else {
 			log('AdminID\'s not valid...');
 			var adminid = new Array();
+		}
+		
+		if (config.AdminGroup) {
+			var admingroup = config.AdminGroup.split(',');
+		} else {
+			log('AdminGroup\'s not valid...');
+			var admingroup = new Array();
 		}
 		
 	
 	
 	
 		sinusbot.on('chat', function(ev) {
+
+		
+						var IsInServerGroup = ev.clientServerGroups.some(function(group) 
+						{
+								
+								if(admingroup.indexOf(group.i.toString()) >= 0)
+								{
+									return true;
+
+								} else { return false; }
+
+
+						});
+
+							
+
+						if(adminid.indexOf(ev.clientUid) >= 0 || IsInServerGroup == true)
+						{
 			
 			msg = ev.msg;
 			command = msg.indexOf('!')
@@ -54,5 +82,6 @@ registerPlugin({
 				if (if msg == command);{
 					chatPrivate(AdminID, "User " + ev.clientNick + "hat einen Command genutzt");
 				}
+						}
     });
 });
