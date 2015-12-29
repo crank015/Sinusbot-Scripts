@@ -23,16 +23,16 @@
 
 registerPlugin({
     name: 'Sound on Join',
-    version: '1.0.6',
-    description: 'Spielt Musik, oder schickt eine Naricht, wenn jemand in die Eingangshalle kommt',
+    version: '1.0.7',
+    description: 'Play\'s a Sound, Track; Write a Message or Speak a Text if a User joined the Server',
     author: 'Crank015 <cranker015@gmail.com> & Lala Deviluke <latias@mail.latias.info>',
     vars: {
 	Sound: {
-            title: 'Welcher Sound?',
+            title: 'What Sound?',
             type: 'string'
 		},
 		message: {
-            title: 'Welche Naricht?',
+            title: 'What Message? %n = Nickname',
             type: 'string'
         },
 		language: {
@@ -42,11 +42,11 @@ registerPlugin({
                 'English']
         },
         Typ: {
-            title: 'Typ',
+            title: 'Type',
             type: 'select',
             options: ['Private chat',
                 'Sound/Music',
-		'TTS']
+				'TTS']
         }
     }
 }, function(sinusbot, config, info) {
