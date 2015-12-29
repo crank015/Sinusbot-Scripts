@@ -29,7 +29,7 @@ registerPlugin({
     vars: {
 	Sound: {
             title: 'What Sound?',
-            type: 'string'
+            type: 'track'
 	},
 	message: {
             title: 'What Message? %n = Nickname',
@@ -70,11 +70,8 @@ registerPlugin({
 //Script
       	var chat = config.message;
 	var lang;
-	if (config.Sound.indexOf('track://')) {
-		var sound = config.Sound;
-	} else {
-		var sound = 'track://' + config.Sound;
-	}
+	var sound = config.Sound['url'];
+	
 	switch(config.language) {
 		case 'Deutsch':
 			lang = 'eurgermanfemale';
