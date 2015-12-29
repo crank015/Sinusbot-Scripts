@@ -27,26 +27,26 @@ registerPlugin({
     description: 'Play\'s a Sound, Track; Write a Message or Speak a Text if a User joined the Server',
     author: 'Crank015 <cranker015@gmail.com> & Lala Deviluke <latias@mail.latias.info>',
     vars: {
-		Sound: {
+	Sound: {
             title: 'What Sound?',
             type: 'string'
-		},
-		message: {
+	},
+	message: {
             title: 'What Message? %n = Nickname',
             type: 'string'
         },
-		language: {
+	language: {
             title: 'Language',
             type: 'select',
             options: ['Deutsch',
-                'English']
+               		'English']
         },
         Typ: {
             title: 'Type',
             type: 'select',
             options: ['Private chat',
-                'Sound/Music',
-				'TTS']
+                	'Sound/Music',
+			'TTS']
         }
     }
 }, function(sinusbot, config, info) {
@@ -68,35 +68,35 @@ registerPlugin({
     log(info.name + ' v' + info.version + ' by ' + author + ' for SinusBot v0.9.9-8f70ff3 (and above)');
 	
 //Script
-        	var chat = config.message;
-		var lang;
-		if (config.Sound.indexOf('track://')) {
-			var sound = config.Sound;
-		} else {
-			var sound = 'track://' + config.Sound;
-		}
-		switch(config.language) {
-			case 'Deutsch':
-				lang = 'eugermanfemale';
-			case 'English':
-				lang = 'usenglishfemale';
-				break;
-		}
+      	var chat = config.message;
+	var lang;
+	if (config.Sound.indexOf('track://')) {
+		var sound = config.Sound;
+	} else {
+		var sound = 'track://' + config.Sound;
+	}
+	switch(config.language) {
+		case 'Deutsch':
+			lang = 'eurgermanfemale';
+			break;
+		case 'English':
+			lang = 'usenglishfemale';
+			break;
+	}
 
 	sinusbot.on('clientMove', function(ev) {
-		
 		chat = chat.replace(/%n/g, ev.clientNick);
-			if (ev.oldChannel == 0) {
-            			if (config.Typ == 0) {
-                			chatPrivate(ev.clientId, chat);
-            			} else if (config.Typ == 1) {
-								play(sound);
-						} else {
-							say(chat, lang);
-				}
+		if (ev.oldChannel == 0) {
+            		if (config.Typ == 0) {
+                		chatPrivate(ev.clientId, chat);
+            		} else if (config.Typ == 1) {
+				play(sound);
+			} else {
+				say(chat, lang);
+			}
 			return;
-	}
-    });
+		}
+	});
 //Info
     log('');
     log('Loaded !');
