@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Crank015 <cranker015@gmail.com>
+ * Copyright (C) 2015 Crank015 <cranker015@gmail.com> & Lala Deviluke <latias@mail.latias.info>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
