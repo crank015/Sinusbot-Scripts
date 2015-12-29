@@ -17,7 +17,7 @@
 
 /*
  * 
- * @author Crank015 <cranker015@gmail.com>
+ * @author Crank015 <cranker015@gmail.com> & Lala Deviluke <latias@mail.latias.info> 
  * 
  */
 
@@ -25,7 +25,7 @@ registerPlugin({
     name: 'AdminChat',
     version: '1.0',
     description: 'Schreibt dem Admin wenn, ein User einen "! command " nutzt',
-    author: 'Crank015 <cranker015@gmail.com>',
+    author: 'Crank015 <cranker015@gmail.com> & Lala Deviluke <latias@mail.latias.info>',
     vars: {
 			AdminID:
 				title:'Admin UID',
