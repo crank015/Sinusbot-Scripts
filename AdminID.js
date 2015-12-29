@@ -22,9 +22,9 @@
  */
 
 registerPlugin({
-    name: 'sound',
-    version: '1.0.5',
-    description: 'Spielt Musik, oder schickt eine Naricht, wenn jemand in die Eingangshalle kommt',
+    name: 'AdminChat',
+    version: '1.0',
+    description: 'Schreibt dem Admin wenn, ein User einen "! command " nutzt',
     author: 'Crank015 <cranker015@gmail.com>',
     vars: {
 			AdminID:
