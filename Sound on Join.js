@@ -23,7 +23,7 @@
 
 registerPlugin({
     name: 'Sound on Join',
-    version: '1.0.7',
+    version: '1.0.8',
     description: 'Play\'s a Sound, Track; Write a Message or Speak a Text if a User joined the Server',
     author: 'Crank015 <cranker015@gmail.com> & Lala Deviluke <latias@mail.latias.info>',
     vars: {
