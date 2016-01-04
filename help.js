@@ -14,7 +14,7 @@ registerPlugin({
 	var t = config.t;
 	
 	sinusbot.on('chat', function(ev) {
-		if (ev.msg == '!help') {
+		if (ev.msg == '!hilfe') {
 			chatPrivate(clientId, t)
 		}
 		if (ev.msg == '!pic help') {
