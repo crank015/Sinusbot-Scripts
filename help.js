@@ -11,11 +11,11 @@ registerPlugin({
 	}
 	
 }, function(sinusbot, config) {
-	var k = config.t;
+	var t = config.t;
 	
 	sinusbot.on('chat', function(ev) {
 		if (ev.msg == !help) {
-			chatPrivate(clientId, k)
+			chatPrivate(clientId, t)
 		}
 	});
 });
