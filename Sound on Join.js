@@ -94,12 +94,6 @@ registerPlugin({
 			return;
 		}
 	});
-	
-	sinusbot.on('chat', function(ev) {
-		if (ev.msg == !soj help) {
-			chatPrivate(ev.clientId, 'Hilfe für das Script Sound on Join: [color=blue]Keine Commands vorhanden![/color]')
-		}
-	});
 //Info
     log('');
     log('Loaded !');
