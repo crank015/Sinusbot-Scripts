@@ -15,7 +15,7 @@ registerPlugin({
 	
 	sinusbot.on('chat', function(ev) {
 		if (ev.msg == '!hilfe') {
-			chatPrivate(clientId, t)
+			chatPrivate(ev.clientId, t);
 		}
 		if (ev.msg == '!pic help') {
 			chatPrivate(ev.clientId, 'Play in Channel Hilfe:');
