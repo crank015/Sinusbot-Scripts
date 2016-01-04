@@ -79,7 +79,7 @@ registerPlugin({
 			msg = ev.msg;
 			command = msg.indexOf('!')
 			
-				if (if msg == command);{
+				if (if msg == command) {
 					chatPrivate(AdminID, "User " + ev.clientNick + "hat einen Command genutzt");
 				}
 						}
