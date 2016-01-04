@@ -14,8 +14,17 @@ registerPlugin({
 	var t = config.t;
 	
 	sinusbot.on('chat', function(ev) {
-		if (ev.msg == !help) {
+		if (ev.msg == '!help') {
 			chatPrivate(clientId, t)
+		}
+		if (ev.msg == '!pic help') {
+			chatPrivate(ev.clientId, 'Play in Channel Hilfe:');
+		}
+		if (ev.msg == '!soj help') {
+			chatPrivate(ev.clientId, 'Sound on Join Hilfe:');
+		}
+		if (ev.msg == '!sr help') {
+			chatPrivate(ev.clientId, 'Script Reload Hilfe: [color=blue]!reload -> Reloaded die Scripts[/color]');
 		}
 	});
 });
