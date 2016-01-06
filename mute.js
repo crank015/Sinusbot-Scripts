@@ -9,7 +9,8 @@
             	title: 'Volume? (zwischen 1-100)',
             	type: 'string'
     }
- }}, function(sinusbot, config) {
+ }
+ }, function(sinusbot, config) {
 	var v = config.Volume;
 
 		sinusbot.on('chat', function(ev){
