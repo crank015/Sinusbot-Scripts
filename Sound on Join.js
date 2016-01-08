@@ -52,9 +52,7 @@ registerPlugin({
 }, function(sinusbot, config, info) {
 
 //Load Messages
-    log('');
     log('Loading...');
-    log('');
     var author = info.author.split(',');
     if(author.length == 1){
         author = author[0];
@@ -95,7 +93,5 @@ registerPlugin({
 		}
 	});
 //Info
-    log('');
     log('Loaded !');
-    log('');
 });
