@@ -1,6 +1,6 @@
 registerPlugin({
     name: 'TrackInfo',
-    version: '1.0',
+    version: '1.0.1',
     description: 'Edit Nick&Description / Send Messages with the Track Title',
     author: 'Crank015 <cranker015@gmail.com>',
     vars: {
@@ -30,20 +30,9 @@ registerPlugin({
 			type: 'select',
 			options: ['Yes',
                		'No']
-		},
-		
-		refresh: {
-			title: 'Number of seconds for refresh time',
-			type: 'number',
-			placeholder: '25'
 		}
 	}
 }, function(sinusbot, config) {
-	var counter = 0;
-	
-	if (config.refresh < 10) {
-		return;
-	}
 	
 	if(config.Desc == 0) {
 		var a = setDescription(track.title);
@@ -70,14 +59,12 @@ registerPlugin({
 	}
 	
 	
-    sinusbot.on('trackEnd', function(ev) {
-	counter++;
-	    if (counter > config.refresh) {
+    sinusbot.on('track', function(ev) {
+	    if (!track.title) {
 				a; //setDescription
 				b; //chatChannel
 				c; //chatServer
 				d; //setNick
-				counter = 0;
 		}
 		});
 });
