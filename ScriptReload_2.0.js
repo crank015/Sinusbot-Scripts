@@ -1,6 +1,6 @@
 registerPlugin({
     name: 'ScriptReload2',
-    version: '2.0.1',
+    version: '2.0.2',
     description: 'Script Reload 2.0',
     author: 'Crank015',
     vars: {
@@ -66,10 +66,10 @@ registerPlugin({
 								{
 									case '!reload':
 									
-                                        chatPrivate(ev.clientId, '[color=blue][b]ScriptReload[/b][/color] [color=red]Scripts werden neu geladen![/color]');
+                                        chatPrivate(ev.clientId, '[color=blue][b]ScriptReload[/b][/color]: [color=red]Scripts werden neu geladen![/color]');
                                         log(ev.clientNick + ' lädt momentan die Scripts neu!');
                                         reloadScripts();
-                                        chatPrivate(ev.clientId, '[color=blue][b]ScriptReload[/b][/color] [color=green]Scripts wurden neu geladen![/color]');
+                                        chatPrivate(ev.clientId, '[color=blue][b]ScriptReload[/b][/color]: [color=green]Scripts wurden neu geladen![/color]');
                                         log(ev.clientNick + ' hat die Scripts erfolgreich neu geladen!');
 
 									break;
