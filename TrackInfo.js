@@ -60,11 +60,9 @@ registerPlugin({
 	
 	
     sinusbot.on('track', function(ev) {
-	    if (!track.title) {
 				a; //setDescription
 				b; //chatChannel
 				c; //chatServer
 				d; //setNick
-		}
 		});
 });
