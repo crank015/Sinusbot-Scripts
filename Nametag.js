@@ -1,7 +1,7 @@
 registerPlugin({
     name: 'Nametag',
     version: '1.0',
-    description: 'Set\'s the Track title as nickname',
+    description: 'Set\'s the Track title as Nickname',
     author: 'Crank015 <cranker015@gmail.com>',
     vars: {}
 	
@@ -15,7 +15,7 @@ registerPlugin({
 	
 	sinusbot.on('chat', function(ev) {
 		if (ev.msg == '.nickchange') {
-			´setNick('test')
+			setNick('test')
 		}
 	});
 });
