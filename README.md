@@ -2,11 +2,9 @@
 
 Sinusbot Scripts
 
-AdminChat -> WIP
-
 help -> Works!
 
-mute -> WIP
+mute -> Works!
 
 Nametag -> WIP
 
