@@ -8,14 +8,6 @@ registerPlugin({
 			title: 'Refresh Time',
 			type: 'number'
 		},
-		debug: {
-			title: 'Debug Mode',
-			type: 'select'
-            options: [
-                'No',
-                'Yes'
-            ]
-		},
 		nickchange: {
 			title: 'Nickname Change',
 			type: 'select'
@@ -39,7 +31,10 @@ registerPlugin({
 		
 	}
 }, function(sinusbot, config, info) {
-	if (config.debug == 1) {
+	//DEBUG MODE
+	var debug = false;
+	//DEBUG MODE
+	if (debug == true) {
 		chatChannel('Plugin ' + info.name + ' Version: ' + info.version + ' loaded!')
 		log('Plugin ' + info.name + ' Version: ' + info.version + ' loaded!');
 	}
@@ -63,14 +58,14 @@ registerPlugin({
 	if (typeof config.refresh == 'undefined') {
 		var nickchange = 0;
 	}
-	if (config.debug == 1) {
+	if (debug == true) {
 		log('Alle Variablen geladen');
 	}
 	
 	sinusbot.on('timer', function(stamp) {
 		counter++
 		if (counter > refresh) {
-			if (config.debug == 1) {
+			if (debug == true) {
 				log('counter > refresh')
 				chatChannel(counter + ' > ' + refresh);
 			}
@@ -92,11 +87,11 @@ registerPlugin({
 			}
 			//Nickname Change 
 			if (tt != nickname) {
-				if (config.debug == 1) {
+				if (debug == true) {
 					chatChannel('if ' + nickname + ' # ' + tt);
 				}
 				if (nickchange == 0) {
-					if (config.debug == 1) {
+					if (debug == true) {
 						chatChannel('Nickchange = 0');
 					}
 					if (playing()) {
@@ -112,16 +107,15 @@ registerPlugin({
 				}
 			
 				if (nickchange == 1) {
-					if (config.debug == 1) {
+					if (debug == true) {
 						chatChannel('Nickchange not activ! ');
 					}
 				}
 			} else {
-				if (config.debug == 1) {
+				if (debug == true) {
 					chatChannel('else ' + nickname + ' # ' + tt);
 				}
 			}
-			//Nickname Change end
 			//Description Change
 			if (descchange == 0) {
 				if (playing()) {
