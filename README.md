@@ -6,7 +6,7 @@ help -> Works!
 
 mute -> Works!
 
-Nametag -> WIP
+Nametag -> Works!
 
 Play_in_Channel -> Works!
 
@@ -17,3 +17,4 @@ Sound_on_Join -> Works!
 Standart_Options -> Works!
 
 TrackInfo -> WIP
+
