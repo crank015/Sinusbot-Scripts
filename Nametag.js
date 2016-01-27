@@ -10,7 +10,7 @@ registerPlugin({
 		},
 		nickchange: {
 			title: 'Nickname Change',
-			type: 'select'
+			type: 'select',
 			options: [
 				'Yes',
 				'No'
@@ -18,7 +18,7 @@ registerPlugin({
 		},
 		descchange: {
 			title: 'Description Change',
-			type: 'select'
+			type: 'select',
 			options: [
 				'Yes',
 				'No'
