@@ -1,8 +1,8 @@
 registerPlugin({
-	name: 'Nametag'
-	version: '1.2'
-	description: 'meep meep'
-	author: 'Crank015 <cranker015@gmail.com>'
+	name: 'Nametag',
+	version: '1.2',
+	description: 'meep meep',
+	author: 'Crank015 <cranker015@gmail.com>',
 	vars: {
 		refresh: {
 			title: 'Refresh Time',
@@ -35,7 +35,7 @@ registerPlugin({
 	var debug = false;
 	//DEBUG MODE
 	if (debug == true) {
-		chatChannel('Plugin ' + info.name + ' Version: ' + info.version + ' loaded!')
+		chatChannel('Plugin ' + info.name + ' Version: ' + info.version + ' loaded!');
 		log('Plugin ' + info.name + ' Version: ' + info.version + ' loaded!');
 	}
 	var counter = 0;
@@ -128,11 +128,17 @@ registerPlugin({
 					desc = desc.replace(/%h/g, track.tempTitle);
 					setDescription(desc);
 				} else {
-					setDescription('■ Offline')
+					setDescription('■ Offline');
 				}
 			}
 			
 			counter = 0;
+		}
+	});
+	sinusbot.on("chat", function(ev) {
+		if(ev.msg == "!stop") {
+			setDescription('■ Offline');
+			setNick('■ Offline');
 		}
 	});
 });
