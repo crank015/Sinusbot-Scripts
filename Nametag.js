@@ -50,7 +50,7 @@ registerPlugin({
 	var nick;
 	var desc;
 	var nickname;
-	var nonetrack = 'undefine';
+	var nonetrack = 'undefined';
 	
 	if (typeof refresh == 'undefined') {
 		var refresh = 15;
