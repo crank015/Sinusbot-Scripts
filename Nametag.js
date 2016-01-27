@@ -5,7 +5,7 @@ registerPlugin({
 	author: 'Crank015 <cranker015@gmail.com>',
 	vars: {
 		refresh: {
-			title: 'Refresh Time',
+			title: 'Refresh Time (normal is 15s)',
 			type: 'number'
 		},
 		nickchange: {
