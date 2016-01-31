@@ -1,11 +1,7 @@
 registerPlugin({
 	name: 'Nametag',
 	version: '1.2',
-<<<<<<< HEAD:0.9.9-98d0cd5/Nametag.js
 	description: 'Can edit Name and Description',
-=======
-	description: 'meep meep',
->>>>>>> origin/master:Nametag.js
 	author: 'Crank015 <cranker015@gmail.com>',
 	vars: {
 		refresh: {
@@ -54,10 +50,6 @@ registerPlugin({
 	var nick;
 	var desc;
 	var nickname;
-<<<<<<< HEAD:0.9.9-98d0cd5/Nametag.js
-=======
-	var nonetrack = 'undefined';
->>>>>>> origin/master:Nametag.js
 	
 	if (typeof refresh == 'undefined') {
 		var refresh = 15;
@@ -148,8 +140,4 @@ registerPlugin({
 			setNick('■ Offline');
 		}
 	});
-<<<<<<< HEAD:0.9.9-98d0cd5/Nametag.js
 });
-=======
-});
->>>>>>> origin/master:Nametag.js
