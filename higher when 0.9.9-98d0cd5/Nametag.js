@@ -69,7 +69,7 @@ registerPlugin({
 				sinusbot.chatChannel(counter + ' > ' + refresh);
 			}
 			
-			var track = getCurrentTrack();
+			var track = sinusbot.getCurrentTrack();
 			var tt = track.title;
 			var nickname = sinusbot.getNick();
 			
@@ -93,7 +93,7 @@ registerPlugin({
 					if (debug == true) {
 						sinusbot.chatChannel('Nickchange = 0');
 					}
-					if (playing()) {
+					if (sinusbot.playing()) {
 						
 						var nick = tt;
 						if (nick.length > 30) {
@@ -117,7 +117,7 @@ registerPlugin({
 			}
 			//Description Change
 			if (descchange == 0) {
-				if (playing()) {
+				if (sinusbot.playing()) {
 					//descchange_message
 					var desc = config.descchange_message;
 					desc = desc.replace(/%t/g, track.title);
