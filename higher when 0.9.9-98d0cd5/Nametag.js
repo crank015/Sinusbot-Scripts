@@ -117,7 +117,7 @@ registerPlugin({
 			}
 			//Description Change
 			if (descchange == 0) {
-				if (sinusbot.playing()) {
+				if (playing()) {
 					//descchange_message
 					var desc = config.descchange_message;
 					desc = desc.replace(/%t/g, track.title);
@@ -136,8 +136,12 @@ registerPlugin({
 	});
 	sinusbot.on("chat", function(ev) {
 		if(ev.msg == "!stop") {
-			sinusbot.setDescription('■ Offline');
-			sinusbot.setNick('■ Offline');
+			if (descchange == 0) {
+				sinusbot.setDescription('■ Offline');
+			}
+			if (nickchange == 0) {
+				sinusbot.setNick('■ Offline');
+			}
 		}
 	});
 });
