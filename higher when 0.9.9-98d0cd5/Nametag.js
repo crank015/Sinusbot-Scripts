@@ -121,7 +121,7 @@ registerPlugin({
 					//descchange_message
 					var desc = config.descchange_message;
 					desc = desc.replace(/%t/g, track.title);
-					desc = desc.replace(/%a/g, track.Artist);
+					desc = desc.replace(/%a/g, track.artist);
 					desc = desc.replace(/%q/g, track.album);
 					desc = desc.replace(/%b/g, track.tempArtist);
 					desc = desc.replace(/%h/g, track.tempTitle);
