@@ -1,6 +1,6 @@
 registerPlugin({
     name: 'Nametag',
-    version: '2.0',
+    version: '2.1',
     description: 'Can edit Name and Description',
     author: 'Crank015 <cranker015@gmail.com>',
     vars: {
