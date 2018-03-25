@@ -10,7 +10,7 @@ Nametag -> Works!
 
 Play_in_Channel -> Works!
 
-Scriptreload -> Works!
+<a href="https://github.com/crank015/Sinusbot-Scripts/blob/master/newest/scriptReload.js">Scriptreload</a> -> Works with newest!
 
 Sound_on_Join -> Works!
 
